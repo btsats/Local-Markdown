@@ -1,0 +1,27 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Markdown Notes Viewer</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 2rem; background: #fafafa; }
+    textarea { width: 100%; height: 40vh; padding: 1rem; font-family: monospace; font-size: 1rem; }
+    #preview { margin-top: 1rem; padding: 1rem; background: white; border-radius: .5rem; box-shadow: 0 0 10px rgba(0,0,0,.1); }
+  </style>
+</head>
+<body>
+  <h1>Markdown Notes Viewer</h1>
+  <textarea id="input" placeholder="Type Markdown here..."># Hello
+
+- Write notes
+- See them rendered live
+
+**Enjoy!**
+</textarea>
+  <div id="preview"></div>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
