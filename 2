@@ -1,0 +1,15 @@
+// app.js
+const input = document.getElementById("input");
+const preview = document.getElementById("preview");
+
+function render() {
+  preview.innerHTML = marked.parse(input.value);
+  localStorage.setItem("notes-md", input.value);
+}
+
+input.addEventListener("input", render);
+
+// restore previous notes
+const saved = localStorage.getItem("notes-md");
+if (saved) input.value = saved;
+render();
